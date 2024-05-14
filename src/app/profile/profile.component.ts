@@ -43,4 +43,18 @@ export class ProfileComponent implements OnInit {
     };
     return new Intl.DateTimeFormat('fr-FR', options).format(dateObj);
   }
+
+  supprimerEntreprise(id: string):void{
+    console.log('Deleting user with ID:', id);
+      let conf = confirm("Etes-vous sur ?");
+      if (conf) {
+        this.userService.supprimerEntreprise(id).subscribe(() => {
+          console.log('User deleted successfully');
+          window.location.reload(); // Reload the page after successful deletion
+        }, (error) => {
+          console.warn('Error deleting user:', error); // Log as warning instead of error
+          window.location.reload(); // Reload the page even if an error occurs
+        });
+      }
+  }
 }

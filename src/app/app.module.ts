@@ -21,6 +21,7 @@ import { UserService } from './services/user.service';
 import { AuthInterceptor } from './services/auth.interceptor';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddentrepriseComponent } from './addentreprise/addentreprise.component';
+import { UpdateEntrepriseComponent } from './update-entreprise/update-entreprise.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AddentrepriseComponent } from './addentreprise/addentreprise.component'
     ProfileComponent,
     RechercheUsersComponent,
     NavbarComponent,
-    AddentrepriseComponent
+    AddentrepriseComponent,
+    UpdateEntrepriseComponent
   ],
   imports: [
     BrowserModule,

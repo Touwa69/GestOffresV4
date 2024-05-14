@@ -55,6 +55,10 @@ export class UserService {
     return this.http.delete<User>(`${authApiURL}/delete/${id}`);
   }
 
+  supprimerEntreprise(id: string): Observable<Entreprise> {
+    return this.http.delete<Entreprise>(`${authApiURL}/entreprise/${id}`);
+  }
+
   consulterUser(id: string): Observable<User> {
     return this.http.get<User>(`${authApiURL}/user/${id}`);
   }
@@ -90,6 +94,14 @@ export class UserService {
         console.log('User info refreshed with new data.'); // Debugging
       })
     );
+  }
+
+  getEntrepriseById(id: string): Observable<Entreprise> {
+    return this.http.get<Entreprise>(`${authApiURL}/entreprise/${id}`);
+  }
+
+  updateEntreprise(id: string, entrepriseData: FormData): Observable<Entreprise> {
+    return this.http.put<Entreprise>(`${authApiURL}/entreprise/${id}`, entrepriseData);
   }
 
   rechercherParNom(term: string): Observable<any> {

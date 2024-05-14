@@ -10,6 +10,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddentrepriseComponent } from './addentreprise/addentreprise.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UpdateEntrepriseComponent } from './update-entreprise/update-entreprise.component';
 
 const routes: Routes = [
   {path:"home", component:HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"addUser",component:AddUserComponent},
   {path:"signUp",component:SignUpComponent},
   {path: "updateUser/:id", component: UpdateUserComponent},
+  {path:"updateEntreprise/:id",component:UpdateEntrepriseComponent},
   {path:"profile/:id",component:ProfileComponent},
   { path: 'navbar', component: NavbarComponent } ,
   {path:"addentreprise/:id",component:AddentrepriseComponent},
